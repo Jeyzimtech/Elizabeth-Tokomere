@@ -53,7 +53,7 @@ function GalleryPage() {
       />
 
       <section className="mx-auto max-w-7xl px-5 pb-24 pt-12 md:px-8">
-        <div className="grid auto-rows-[220px] grid-cols-2 gap-4 md:grid-cols-4 md:auto-rows-[240px]">
+        <div className="grid auto-rows-[220px] grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 md:auto-rows-[240px]">
           {photos.map((p) => (
             <figure
               key={p.caption}

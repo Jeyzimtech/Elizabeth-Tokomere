@@ -42,12 +42,12 @@ function HomePage() {
             <p className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/60 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-accent backdrop-blur">
               <BadgeCheck className="h-3.5 w-3.5" /> CSW Cert No. {SITE.certNo}
             </p>
-            <h1 className="mt-6 font-display text-5xl leading-[1.02] text-foreground text-balance sm:text-6xl md:text-7xl">
+            <h1 className="mt-6 font-display text-4xl leading-[1.1] text-foreground text-balance xs:text-5xl sm:text-6xl md:text-7xl md:leading-[1.02]">
               Caring work,<br />
               <span className="italic text-primary">grounded in dignity.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground text-pretty">
-              I’m {SITE.shortName} — a registered social worker in Zimbabwe walking with
+              I’m {SITE.shortName} a registered social worker in Zimbabwe walking with
               children, women and families through protection, counseling and community
               development.
             </p>
@@ -68,10 +68,10 @@ function HomePage() {
               </a>
             </div>
 
-            <dl className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-border/70 pt-8">
+            <dl className="mt-12 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-border/70 pt-8 xs:grid-cols-3">
               {[
-                ["3+", "Years in practice"],
-                ["100s", "Lives reached"],
+                ["1+", "Years in practice"],
+                ["20+", "Lives reached"],
                 ["1", "NGO founded"],
               ].map(([n, l]) => (
                 <div key={l}>
@@ -164,8 +164,8 @@ function HomePage() {
       {/* IN THE FIELD */}
       <section className="bg-secondary/40 py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <div className="grid gap-12 md:grid-cols-2 md:items-center">
-            <div className="grid grid-cols-2 gap-4">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div className="grid grid-cols-1 gap-4 xs:grid-cols-2">
               <img
                 src={heroChildren}
                 alt="Children participating in community activities"
@@ -180,7 +180,7 @@ function HomePage() {
                 width={1280}
                 height={896}
                 loading="lazy"
-                className="mt-10 aspect-[4/5] rounded-2xl object-cover shadow-soft"
+                className="mt-6 aspect-[4/5] rounded-2xl object-cover shadow-soft xs:mt-10"
               />
             </div>
             <div>
@@ -218,7 +218,7 @@ function HomePage() {
       <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
         <div className="relative overflow-hidden rounded-[2rem] bg-gradient-forest p-10 text-primary-foreground md:p-16">
           <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-gold/20 blur-3xl" />
-          <div className="relative grid gap-10 md:grid-cols-[2fr_1fr] md:items-center">
+          <div className="relative grid gap-10 lg:grid-cols-[2fr_1fr] lg:items-center">
             <div>
               <p className="text-xs uppercase tracking-[0.25em] text-gold">Let’s collaborate</p>
               <h2 className="mt-3 font-display text-4xl text-white md:text-5xl">

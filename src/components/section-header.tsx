@@ -43,7 +43,7 @@ export function PageHero({
         <p className="mb-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-accent">
           <span className="h-px w-8 bg-accent" /> {eyebrow}
         </p>
-        <h1 className="font-display text-4xl leading-[1.05] text-foreground text-balance sm:text-5xl md:text-6xl">
+        <h1 className="font-display text-3xl leading-[1.1] text-foreground text-balance xs:text-4xl sm:text-5xl md:text-6xl md:leading-[1.05]">
           {title}
         </h1>
         {intro && (
