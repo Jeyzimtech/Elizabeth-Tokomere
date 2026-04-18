@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://elizabeth-tokomere.vercel.app/sitemap.xml
+Sitemap: https://elizabethtokomere.dev/sitemap.xml
