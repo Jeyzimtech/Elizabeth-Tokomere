@@ -14,6 +14,7 @@ export const SITE = {
   degree: "Bachelor of Social Work (BSW)",
   grade: "Upper Second Class (2.1) — 2025",
   organisation: "Rescue Foundation Trust (REFO)",
+  linkedin: "https://www.linkedin.com/in/rutendo-tokomere-1511b12a8",
 };
 
 export const NAV = [

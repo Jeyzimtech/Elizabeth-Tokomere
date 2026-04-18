@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import { PageHero } from "@/components/section-header";
-import { Mail, Phone, MessageCircle, MapPin, Download } from "lucide-react";
+import { Mail, Phone, MessageCircle, MapPin, Download, Linkedin } from "lucide-react";
 import { SITE } from "@/lib/site";
 
 export const Route = createFileRoute("/contact")({
@@ -46,6 +46,13 @@ function ContactPage() {
       href: `tel:+${SITE.whatsapp}`,
       cta: "Call directly",
     },
+    {
+      icon: Linkedin,
+      title: "LinkedIn",
+      value: "Rutendo Tokomere",
+      href: SITE.linkedin,
+      cta: "View profile",
+    },
   ];
 
   return (
@@ -61,7 +68,7 @@ function ContactPage() {
       />
 
       <section className="mx-auto max-w-7xl px-5 py-16 md:px-8">
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {cards.map(({ icon: Icon, title, value, href, cta }) => (
             <a
               key={title}
