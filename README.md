@@ -29,8 +29,8 @@ Ensure you have [Node.js](https://nodejs.org/) installed (LTS version recommende
 
 1. **Clone the repository**:
    ```bash
-   git clone <your-repo-url>
-   cd elizabeth-portfolio
+   git clone https://github.com/Jeyzimtech/Elizabeth-Tokomere.git
+   cd elizabeth
    ```
 
 2. **Install dependencies**:

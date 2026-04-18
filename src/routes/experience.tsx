@@ -53,7 +53,7 @@ const items = [
 
 function ExperiencePage() {
   return (
-    <SiteLayout>
+    <>
       <PageHero
         eyebrow="Experience"
         title={
@@ -115,6 +115,6 @@ function ExperiencePage() {
           </div>
         </div>
       </section>
-    </SiteLayout>
+    </>
   );
 }

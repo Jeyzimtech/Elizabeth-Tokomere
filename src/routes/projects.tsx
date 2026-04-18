@@ -59,7 +59,7 @@ export const Route = createFileRoute("/projects")({
 
 function ProjectsPage() {
   return (
-    <SiteLayout>
+    <>
       <PageHero
         eyebrow="Projects"
         title={
@@ -100,6 +100,6 @@ function ProjectsPage() {
           ))}
         </div>
       </section>
-    </SiteLayout>
+    </>
   );
 }

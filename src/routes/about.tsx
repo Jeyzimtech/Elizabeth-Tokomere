@@ -27,7 +27,7 @@ export const Route = createFileRoute("/about")({
 
 function AboutPage() {
   return (
-    <SiteLayout>
+    <>
       <PageHero
         eyebrow="About"
         title={
@@ -136,6 +136,6 @@ function AboutPage() {
           </div>
         </div>
       </section>
-    </SiteLayout>
+    </>
   );
 }

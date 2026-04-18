@@ -27,7 +27,7 @@ export const Route = createFileRoute("/credentials")({
 
 function CredentialsPage() {
   return (
-    <SiteLayout>
+    <>
       <PageHero
         eyebrow="Credentials"
         title={
@@ -118,6 +118,6 @@ function CredentialsPage() {
           </div>
         </div>
       </section>
-    </SiteLayout>
+    </>
   );
 }

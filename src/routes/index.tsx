@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
 
 function HomePage() {
   return (
-    <SiteLayout>
+    <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-gradient-warm">
         <div className="pointer-events-none absolute -right-32 -top-32 h-[28rem] w-[28rem] rounded-full bg-accent/15 blur-3xl" />
@@ -247,6 +247,6 @@ function HomePage() {
           </div>
         </div>
       </section>
-    </SiteLayout>
+    </>
   );
 }

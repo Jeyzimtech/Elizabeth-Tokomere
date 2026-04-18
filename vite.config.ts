@@ -7,7 +7,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [
-    tanstackStart(),
+    // tanstackStart(),
     react(),
     tailwindcss(),
     tsConfigPaths(),

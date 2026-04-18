@@ -27,7 +27,7 @@ export const Route = createFileRoute("/refo")({
 
 function RefoPage() {
   return (
-    <SiteLayout>
+    <>
       <PageHero
         eyebrow="The Trust"
         title={
@@ -103,6 +103,6 @@ function RefoPage() {
           ))}
         </div>
       </section>
-    </SiteLayout>
+    </>
   );
 }

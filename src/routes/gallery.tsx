@@ -41,7 +41,7 @@ export const Route = createFileRoute("/gallery")({
 
 function GalleryPage() {
   return (
-    <SiteLayout>
+    <>
       <PageHero
         eyebrow="Gallery"
         title={
@@ -74,6 +74,6 @@ function GalleryPage() {
           ))}
         </div>
       </section>
-    </SiteLayout>
+    </>
   );
 }

@@ -49,7 +49,7 @@ function ContactPage() {
   ];
 
   return (
-    <SiteLayout>
+    <>
       <PageHero
         eyebrow="Contact"
         title={
@@ -152,6 +152,6 @@ function ContactPage() {
           </div>
         </div>
       </section>
-    </SiteLayout>
+    </>
   );
 }
