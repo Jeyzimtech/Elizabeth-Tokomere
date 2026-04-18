@@ -22,12 +22,12 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background shadow-sm">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-8">
-        <Link to="/" onClick={() => setOpen(false)} className="group flex items-center gap-3">
-          <div className="overflow-hidden rounded-xl shadow-soft transition-transform group-hover:scale-110">
+        <Link to="/" onClick={() => setOpen(false)} className="group flex items-center gap-2">
+          <div className="flex h-10 w-10 items-center justify-center transition-transform group-hover:scale-110">
             <img 
-              src="/favicon.png" 
+              src="/logo.svg" 
               alt="Elizabeth Tokomere Logo" 
-              className="h-10 w-10 object-cover"
+              className="h-9 w-9"
             />
           </div>
           <span className="hidden flex-col leading-tight xs:flex">
