@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Download, HeartHandshake, ShieldCheck, Megaphone, BadgeCheck } from "lucide-react";
 import portrait from "@/assets/elizabeth-portrait.jpeg";
-import heroChildren from "@/assets/hero-children.png";
+import galleryJef from "@/assets/gallery-jef.jpeg";
 import outreach from "@/assets/gallery-outreach.jpg";
 import children from "@/assets/gallery-children.jpg";
 import { SiteLayout } from "@/components/site-layout";
@@ -169,8 +169,8 @@ function HomePage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div className="grid grid-cols-1 gap-4 xs:grid-cols-2">
               <img
-                src={heroChildren}
-                alt="Children participating in community activities"
+                src={galleryJef}
+                alt="Elizabeth working with children in the community"
                 width={1280}
                 height={896}
                 loading="lazy"

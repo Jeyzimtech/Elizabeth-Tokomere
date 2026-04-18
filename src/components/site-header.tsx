@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
-import { Menu, X, Download, ArrowRight, HeartHandshake } from "lucide-react";
+import { Menu, X, Download, ArrowRight } from "lucide-react";
 import { NAV, SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -23,9 +23,13 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background shadow-sm">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-8">
         <Link to="/" onClick={() => setOpen(false)} className="group flex items-center gap-3">
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-forest text-primary-foreground shadow-soft transition-transform group-hover:scale-110">
-            <HeartHandshake className="h-6 w-6" />
-          </span>
+          <div className="overflow-hidden rounded-xl shadow-soft transition-transform group-hover:scale-110">
+            <img 
+              src="/favicon.png" 
+              alt="Elizabeth Tokomere Logo" 
+              className="h-10 w-10 object-cover"
+            />
+          </div>
           <span className="hidden flex-col leading-tight xs:flex">
             <span className="font-display text-base text-foreground tracking-tight">{SITE.shortName}</span>
             <span className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground/80">
