@@ -1,0 +1,137 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Outfit:wght@300;400;500;600;700&display=swap");
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+  --color-leaf: var(--leaf);
+  --color-clay: var(--clay);
+  --color-gold: var(--gold);
+  --color-sand: var(--sand);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Brand */
+  --cream: oklch(0.975 0.012 80);            /* page background */
+  --sand: oklch(0.94 0.02 75);               /* surfaces */
+  --ink: oklch(0.22 0.02 60);                /* primary text */
+  --leaf: oklch(0.36 0.06 155);              /* deep forest green */
+  --clay: oklch(0.58 0.13 45);               /* terracotta */
+  --gold: oklch(0.78 0.13 80);               /* warm gold accent */
+
+  --background: var(--cream);
+  --foreground: var(--ink);
+  --card: oklch(0.99 0.005 80);
+  --card-foreground: var(--ink);
+  --popover: oklch(0.99 0.005 80);
+  --popover-foreground: var(--ink);
+  --primary: var(--leaf);
+  --primary-foreground: oklch(0.98 0.01 80);
+  --secondary: var(--sand);
+  --secondary-foreground: var(--ink);
+  --muted: oklch(0.93 0.015 70);
+  --muted-foreground: oklch(0.45 0.02 60);
+  --accent: var(--clay);
+  --accent-foreground: oklch(0.98 0.01 80);
+  --destructive: oklch(0.55 0.22 27);
+  --destructive-foreground: oklch(0.98 0.01 80);
+  --border: oklch(0.88 0.02 75);
+  --input: oklch(0.88 0.02 75);
+  --ring: var(--leaf);
+
+  --gradient-warm: linear-gradient(135deg, color-mix(in oklab, var(--clay) 18%, var(--cream)), var(--cream) 60%, color-mix(in oklab, var(--gold) 14%, var(--cream)));
+  --gradient-forest: linear-gradient(160deg, var(--leaf), color-mix(in oklab, var(--leaf) 70%, black));
+  --shadow-soft: 0 1px 2px oklch(0.2 0.02 60 / 0.06), 0 8px 30px oklch(0.2 0.02 60 / 0.08);
+  --shadow-elegant: 0 20px 50px -20px color-mix(in oklab, var(--leaf) 35%, transparent);
+}
+
+.dark {
+  --background: oklch(0.18 0.015 60);
+  --foreground: oklch(0.96 0.01 80);
+  --card: oklch(0.22 0.018 60);
+  --card-foreground: oklch(0.96 0.01 80);
+  --popover: oklch(0.22 0.018 60);
+  --popover-foreground: oklch(0.96 0.01 80);
+  --primary: oklch(0.78 0.13 80);
+  --primary-foreground: oklch(0.18 0.015 60);
+  --secondary: oklch(0.26 0.02 60);
+  --secondary-foreground: oklch(0.96 0.01 80);
+  --muted: oklch(0.26 0.02 60);
+  --muted-foreground: oklch(0.7 0.02 70);
+  --accent: oklch(0.65 0.13 45);
+  --accent-foreground: oklch(0.18 0.015 60);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.78 0.13 80);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--clay) 35%, transparent);
+    color: var(--ink);
+  }
+}
+
+@layer utilities {
+  .font-display { font-family: var(--font-display); }
+  .font-sans { font-family: var(--font-sans); }
+  .bg-gradient-warm { background-image: var(--gradient-warm); }
+  .bg-gradient-forest { background-image: var(--gradient-forest); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+}
