@@ -42,6 +42,7 @@ export function SiteHeader() {
               <Link
                 key={item.to}
                 to={item.to}
+                preload="intent"
                 className={cn(
                   "relative rounded-full px-3.5 py-2 text-sm transition-all hover:bg-secondary/40",
                   active
@@ -112,6 +113,7 @@ export function SiteHeader() {
                     >
                       <Link
                         to={item.to}
+                        preload="intent"
                         onClick={() => setOpen(false)}
                         className={cn(
                           "group flex items-center justify-between rounded-2xl px-5 py-4 text-lg transition-all active:scale-[0.98]",

@@ -48,6 +48,7 @@ function AboutPage() {
                 width={860}
                 height={1075}
                 loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover"
               />
             </div>

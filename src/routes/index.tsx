@@ -92,6 +92,8 @@ function HomePage() {
                 alt="Portrait of Elizabeth Rutendo Tokomere, registered social worker"
                 width={860}
                 height={1075}
+                fetchPriority="high"
+                decoding="async"
                 className="h-full w-full object-cover"
               />
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-2xl border border-white/15 bg-black/35 px-4 py-3 text-white backdrop-blur-md">
@@ -172,6 +174,7 @@ function HomePage() {
                 width={1280}
                 height={896}
                 loading="lazy"
+                decoding="async"
                 className="aspect-[4/5] rounded-2xl object-cover shadow-soft"
               />
               <img
