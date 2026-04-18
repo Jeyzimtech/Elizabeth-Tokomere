@@ -102,7 +102,7 @@ export function SiteHeader() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="ml-auto flex h-full w-[85%] max-w-sm flex-col bg-white p-6 pt-24 shadow-2xl border-l border-border dark:bg-background"
+              className="ml-auto flex h-full w-[85%] max-w-sm flex-col bg-white p-6 pt-12 shadow-2xl border-l border-border dark:bg-background overflow-y-auto"
             >
               <div className="flex flex-col gap-2">
                 <p className="px-4 text-[10px] uppercase tracking-[0.3em] text-muted-foreground/80 mb-3">Principal Menu</p>
@@ -138,7 +138,7 @@ export function SiteHeader() {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="mt-auto pt-10"
+                className="pt-6"
               >
                 <div className="rounded-3xl bg-primary/5 p-6 border border-primary/10">
                   <p className="text-sm font-medium text-foreground mb-1">
