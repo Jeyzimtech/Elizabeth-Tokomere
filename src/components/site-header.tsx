@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
-import { Menu, X, Download, ArrowRight } from "lucide-react";
+import { Menu, X, Download, ArrowRight, HeartHandshake } from "lucide-react";
 import { NAV, SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -23,13 +23,13 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background shadow-sm">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-8">
         <Link to="/" onClick={() => setOpen(false)} className="group flex items-center gap-3">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-forest text-primary-foreground shadow-soft transition-transform group-hover:scale-110">
-            <span className="font-display text-lg leading-none">E</span>
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-forest text-primary-foreground shadow-soft transition-transform group-hover:scale-110">
+            <HeartHandshake className="h-6 w-6" />
           </span>
           <span className="hidden flex-col leading-tight xs:flex">
-            <span className="font-display text-base text-foreground">{SITE.shortName}</span>
-            <span className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground/80">
-              Social Worker
+            <span className="font-display text-base text-foreground tracking-tight">{SITE.shortName}</span>
+            <span className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground/80">
+              {SITE.role}
             </span>
           </span>
         </Link>

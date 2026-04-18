@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Download, HeartHandshake, ShieldCheck, Sprout, BadgeCheck } from "lucide-react";
+import { ArrowRight, Download, HeartHandshake, ShieldCheck, Megaphone, BadgeCheck } from "lucide-react";
 import portrait from "@/assets/elizabeth-portrait.jpeg";
 import heroChildren from "@/assets/hero-children.png";
 import outreach from "@/assets/gallery-outreach.jpg";
@@ -70,7 +70,7 @@ function HomePage() {
 
             <dl className="mt-12 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-border/70 pt-8 xs:grid-cols-3">
               {[
-                ["1+", "Years in practice"],
+                ["2+", "Years in practice"],
                 ["20+", "Lives reached"],
                 ["1", "NGO founded"],
               ].map(([n, l]) => (
@@ -141,7 +141,7 @@ function HomePage() {
               copy: "Compassionate support for women, children and bereaved families navigating hardship.",
             },
             {
-              icon: Sprout,
+              icon: Megaphone,
               title: "Community Outreach & Advocacy",
               copy: "Awareness campaigns on health, hygiene and gender-based violence prevention.",
             },
