@@ -30,9 +30,9 @@ export function SiteHeader() {
               className="h-9 w-9"
             />
           </div>
-          <span className="hidden flex-col leading-tight xs:flex">
-            <span className="font-display text-base text-foreground tracking-tight">{SITE.shortName}</span>
-            <span className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground/80">
+          <span className="flex flex-col leading-tight">
+            <span className="font-display text-sm font-semibold text-foreground tracking-tight sm:text-base">{SITE.shortName}</span>
+            <span className="text-[8px] uppercase tracking-[0.18em] text-muted-foreground/80 sm:text-[10px] sm:tracking-[0.25em]">
               {SITE.role}
             </span>
           </span>
@@ -120,18 +120,14 @@ export function SiteHeader() {
                         preload="intent"
                         onClick={() => setOpen(false)}
                         className={cn(
-                          "group flex items-center justify-between rounded-2xl px-5 py-4 text-lg transition-all active:scale-[0.98]",
-                          active 
-                            ? "bg-primary text-primary-foreground font-display shadow-soft" 
-                            : "text-foreground hover:bg-secondary border border-transparent hover:border-border/40"
+                          "group flex items-center justify-between rounded-xl px-4 py-3 text-base transition-all active:scale-[0.98]",
+                          active
+                            ? "bg-primary/10 text-primary"
+                            : "text-foreground hover:bg-secondary/50"
                         )}
                       >
-                        <span>{item.label}</span>
-                        {active ? (
-                          <motion.div layoutId="mobileActive" className="h-1.5 w-1.5 rounded-full bg-accent" />
-                        ) : (
-                          <ArrowRight className="h-4 w-4 opacity-0 transition-opacity group-hover:opacity-100 text-muted-foreground" />
-                        )}
+                        <span className="font-medium tracking-tight">{item.label}</span>
+                        <ArrowRight className="h-4 w-4 opacity-0 transition-all -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0" />
                       </Link>
                     </motion.div>
                   );
@@ -154,7 +150,7 @@ export function SiteHeader() {
                   <a
                     href="/downloads/Elizabeth-Tokomere-Resume.pdf"
                     download
-                    className="flex w-full items-center justify-center gap-3 rounded-xl bg-primary py-3.5 text-sm font-medium text-primary-foreground shadow-soft transition-transform active:scale-[0.97]"
+                    className="flex w-full items-center justify-center gap-3 rounded-xl bg-primary py-3 text-sm font-medium text-primary-foreground shadow-soft transition-transform active:scale-[0.97]"
                   >
                     <Download className="h-4 w-4" />
                     Download Resume
